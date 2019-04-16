@@ -85,6 +85,11 @@ target/
 __pycache__/
 local_settings.py
 
+
+
+###InteliJ###
+.idea/
+
 .env
 db.sqlite3
 

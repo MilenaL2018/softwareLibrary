@@ -94,13 +94,8 @@ local_settings.py
 db.sqlite3
 
 djangoDep/
-<<<<<<< HEAD
+
 venv/
 myvenv/
 bootstrap/
-=======
 
-
-###InteliJ###
-.idea/
->>>>>>> 41440c6db01730a95946a71231d32fffce2a583b

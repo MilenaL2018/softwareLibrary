@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ManagerlibraryConfig(AppConfig):
+class ManagerLibraryConfig(AppConfig):
     name = 'managerLibrary'

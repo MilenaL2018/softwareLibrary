@@ -4,8 +4,7 @@ from .forms import CommentForm
 # Create your views here.
 
 
-def capdoc(request):
-    return render(request, 'blog/capdoc.html', {})
+
 
 def historialnotas(request):
     if request.method == 'POST':

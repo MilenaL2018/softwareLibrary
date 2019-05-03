@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Historial Notas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <title>Perfil_usuario_Profesor</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">{{CustomUser.first_name|capfirst}}</a>
+    <p class="text-light">{{CustomUser.first_name|capfirst}} {{ CustomerUser.last_name|capfirst}}</p>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
@@ -22,13 +22,13 @@
            <div class="form-check">
                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                      <label class="form-check-label text-light" for="defaultCheck1">
-                            Ordenar por orden alfabético
+
                      </label>
            </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                     <label class="form-check-label text-light" for="defaultCheck2">
-                    Ordenar por fecha
+
                     </label>
             </div>
         </ul>
@@ -36,38 +36,10 @@
 </nav>
 
 
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{Comment.author}}</h5>
-        <p class="card-text">{{ Comment.description }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{Comment.date}}</small>
-        <small class="text-muted">{{ Comment.cathegory }}</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{ Comment.author }}</h5>
-      <p class="card-text">{{ Comment.description }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ Comment.date }}</small>
-        <small class="text-muted">{{ Comment.cathegory }}</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{ Comment.author }}</h5>
-     <p class="card-text">{{ Comment.description }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ Comment.date }}</small>
-        <small class="text-muted">{{ Comment.cathegory }}</small>
-    </div>
-  </div>
-</div>
+
+
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -76,5 +48,6 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>

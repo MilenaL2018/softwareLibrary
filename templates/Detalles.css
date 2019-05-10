@@ -17,3 +17,12 @@ button{
 label{
     margin-left: 0.5em;
 }
+
+card{
+    width: 18rem;
+}
+
+article{
+   margin-left: 2em;
+    margin-top: 2em;
+}

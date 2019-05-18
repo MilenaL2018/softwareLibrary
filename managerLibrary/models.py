@@ -1,8 +1,24 @@
+from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-from users.managers import SoftDeletionManager
-from users.models import CustomUser
+from .managers import SoftDeletionManager, CustomUserManager
+
+
+class CustomUser(AbstractBaseUser, PermissionsMixin):
+    email = models.EmailField('email address', unique=True)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    date_joined = models.DateTimeField(default=timezone.now)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
 
 
 class SoftDeletionModel(models.Model):
@@ -121,7 +137,6 @@ class Professor(CustomUser, SoftDeletionModel):
     last_name = models.CharField(max_length=50, null=False, blank=False)
     subjects = models.ManyToManyField(
         Subject,
-        null = True,
         related_name = "subjects")
 
     def __str__(self):
@@ -165,11 +180,10 @@ class Comment(SoftDeletionModel):
         related_name = "comments")
     categories = models.ManyToManyField(
         Category,
-        null = True,
         blank = True,
         related_name = "categories")
     description = models.TextField()
-    date = models.DateTimeField(default = timezone.now())
+    date = models.DateTimeField(default = timezone.now)
 
     def __str__(self):
         return str(self.id)
@@ -242,7 +256,7 @@ class Grades(SoftDeletionModel):
 
 class Presence(SoftDeletionModel):
     id = models.AutoField(primary_key=True)
-    date = models.DateTimeField(default = timezone.now())
+    date = models.DateTimeField(default = timezone.now)
     student = models.OneToOneField(
         Student,
         null = True,

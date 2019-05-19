@@ -7,4 +7,4 @@ from django.shortcuts import render
 
 
 def historialnotas(request):
-    return render(request, 'historialnotas.html', {})
+    return render(request, 'comments_history.html', {})

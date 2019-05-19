@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil_usuario_Profesor</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <title>Perfilusuariopreceptor</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="Detalles.css" rel="stylesheet">
+    <link href="details.css" rel="stylesheet">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <p class="text-light">{{CustomUser.first_name|capfirst}} {{ CustomerUser.last_name|capfirst}}</p>
+    <p class="text-light">{{CustomUser.first_name|capfirst}},{{ CustomerUser.last_name|capfirst}}</p>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
@@ -30,16 +30,16 @@
           <div class="card" style=" width: 18rem;">
             <ul class="list-group list-group-flush">
                  <li class="list-group-item">
-                     <a href="CrearNota.html" class="btn btn-primary">Crear nota</a>
+                     <a href="create_comment.html" class="btn btn-primary">Crear nota</a>
                  </li>
                 <li class="list-group-item">
-                    <a href="MisNotas.html" class="btn btn-primary">Ver mis notas</a>
+                    <a href="my_comments.html" class="btn btn-primary">Ver mis notas</a>
                 </li>
                  <li class="list-group-item">
-                     <a href="SubirCalificacion.html" class="btn btn-primary">Subir calificaciones</a>
+                     <a href="assistance.html" class="btn btn-primary">Tomar asistencia</a>
                  </li>
                 <li class="list-group-item">
-                     <a href="Progreso_Academico.html" class="btn btn-primary">Ver progreso académico</a>
+                     <a href="see_assistance.html" class="btn btn-primary">Ver asistencias</a>
                 </li>
             </ul>
           </div>
@@ -49,14 +49,13 @@
             <div class="card-body">
                 <h5 class="card-title">Mis datos</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Cursos a cargo</h6>
-                <li>
-                    Algo
-                </li>
             </div>
          </div>
       </div>
     </div>
 </article>
+
+
 
 
 
@@ -69,6 +68,5 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </body>
 </html>
